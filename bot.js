@@ -1,8 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const token = 'NzAzMDIwOTIyNzMwMzE1ODA2.XqIwoQ.ZhwwkNTKO3TYN-ngfowvV8ylxWE';
-//var PouchDB = require('pouchdb');
-//var db = new PouchDB('my_database'); 
 const response = ["It's Gods will!",
 "We shall take back Jerusalem!",
 "DEUS VULT!",
@@ -36,4 +33,4 @@ client.on("message", msg =>{
 })
 // Response message
 
-client.login(token);
+client.login(process.env.token);
