@@ -22,7 +22,7 @@ bot.on("message", msg =>{
         fs.writeFile('deus_counts.txt', deus_counts.toString(), (err) => { 
             if (err) throw err; 
         });
-        if(Number.isInteger(deus_counts/3)){
+        if(Number.isInteger(deus_counts/27)){
             msg.channel.send(hectars);
         }        
         else {
