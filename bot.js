@@ -6,7 +6,6 @@ var deus_counts = parseInt(fs.readFileSync('deus_counts.txt'));
 var hectar_percent = (deus_counts*49)/12510;
 const phrase = ("deus vult");
 var hectars = ("That's " + deus_counts + " Holy Battle Cries recorded! We are at " + hectar_percent.toFixed(3) +"% of our goal to reclaim the 12,510 hectares of the Holy Land. We shall take Jerusalem!");
-const atdeusvult = ("@Deus Vult");
 const atresponses = fs.readFileSync('atresponses.txt').toString().split("\n");
 
 // Ready
