@@ -16,11 +16,8 @@ bot.on("ready",() => {
 
 // Response message; deus_counts +1; save to file
 bot.on('message', msg => {
-    var user = msg.mentions.users.first().username;
-    if(user === "Deus Vult"){
-        msg.reply(atresponses[Math.floor(Math.random() * atresponses.length)])
-    }
-    else {
+    var mention = msg.mentions.users.first()
+    if(mention === undefined){
         if(msg.content.toLowerCase().includes(phrase.toLowerCase())){
             deus_counts = deus_counts + 1;
             console.log(deus_counts);
@@ -29,14 +26,20 @@ bot.on('message', msg => {
                 if (err) throw err;
             });
             if(Number.isInteger(deus_counts/27)){
-            msg.channel.send(hectars);
+                msg.channel.send(hectars);
             }        
             else {
                 msg.channel.send(responses[Math.floor(Math.random() * responses.length)]);
             }
         }
-    }    
-})
+    }
+    else {
+        var user = msg.mentions.users.first().username
+            if(user === "Deus Vult"){
+                msg.reply(atresponses[Math.floor(Math.random() * atresponses.length)])
+            }
+    } 
+})  
 // Response message; deus_counts +1; save to file
 
 bot.login(process.env.token);
