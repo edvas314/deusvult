@@ -17,7 +17,7 @@ bot.on("ready",() => {
 
 // Response message; deus_counts +1; save to file
 bot.on("message", msg =>{
-    if(msg.content.includes(atdeusvult)){
+    if(recievedMessage.isMemberMentioned(bot.user)){
         msg.reply(atresponses[Math.floor(Math.random() * atresponses.length)])
     }
     else {
