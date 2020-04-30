@@ -10,7 +10,7 @@ bot.on("ready",() => {
 })
 bot.on('message', msg => {
     var author = msg.member.user.username;
-    switch (author === "TestyBoi"){
+    switch (author === "Deus Vult"){
         case true:
         break;
         case false:
@@ -21,7 +21,7 @@ bot.on('message', msg => {
         switch(msghasmention){
             case false:
                 const phrase = ("deus" && "vult");
-                if((msg.content.toLowerCase().includes(phrase.toLowerCase())) && (author != "TestyBoi")){
+                if((msg.content.toLowerCase().includes(phrase.toLowerCase())) && (author != "Deus Vult")){
                     console.log("THE PHRASE WAS THERE");
                     deus_counts = deus_counts + 1;
                     console.log("Deus counts: " + deus_counts);
@@ -50,7 +50,7 @@ bot.on('message', msg => {
                     case false:    
                         var FirstName = msg.mentions.users.first().username
                         console.log("Mentionade name: " + FirstName);
-                        if((FirstName === "TestyBoi") && (author != "TestyBoi")){
+                        if((FirstName === "Deus Vult") && (author != "Deus Vult")){
                             console.log("THE MENTION WAS HIM")
                             msg.reply(atresponses[Math.floor(Math.random() * atresponses.length)])
                         };
@@ -59,7 +59,7 @@ bot.on('message', msg => {
                     case true:   
                         var FirstRole = msg.mentions.roles.first().name
                         console.log("Mentioned Role: " + FirstRole);
-                        if((FirstRole === "TestyBoi") && (author != "TestyBoi")){
+                        if((FirstRole === "Deus Vult") && (author != "Deus Vult")){
                             console.log("THE MENTION WAS HIM")
                             msg.reply(atresponses[Math.floor(Math.random() * atresponses.length)])
                         };
